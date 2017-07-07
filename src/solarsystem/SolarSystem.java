@@ -14,15 +14,21 @@ package solarsystem;
 public class SolarSystem {
 	
 
-	private PlanetConfiguration configuration;
+	private DynamicBody sonne, erde;
 	private RenderEngine render;
 	private PhysicsEngine physics;
 	
 	
 	public SolarSystem() {
+		sonne = new DynamicBody();
+		erde = new DynamicBody(20, new double[] {1,0,0}, new double[] {0,0,1});
 	}
 
 	void run() {
+		System.out.println("Sonne");
+		sonne.showInfo();
+		System.out.println("Erde");
+		erde.showInfo();
 		while(true) {
 			
 		}
